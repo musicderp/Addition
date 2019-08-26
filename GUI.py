@@ -8,6 +8,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from music import gas
 
 
 class Ui_Dialog(object):
@@ -74,6 +75,9 @@ class Ui_Dialog(object):
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
 
+
+        self.pushButton.clicked.connect(self.ENABLECHROMOSOMALADDINGSUBSYSTEM)
+
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "DANK CHROMOSOMAL ADDING MACHINE V0.1"))
@@ -85,6 +89,8 @@ class Ui_Dialog(object):
         self.label_5.setText(_translate("Dialog", "ANSWER:"))
         self.label_6.setText(_translate("Dialog", "ANSWER ACCURACY:"))
 
+    def ENABLECHROMOSOMALADDINGSUBSYSTEM(self):
+        gas()
 
 if __name__ == "__main__":
     import sys
